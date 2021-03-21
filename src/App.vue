@@ -7,7 +7,17 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    this.testMockFun()
+  },
+  methods: {
+    testMockFun () {
+      this.$axios.get('/api/get/list').then(res => {
+        console.log(res)
+      })
+    }
+  }
 }
 </script>
 
