@@ -82,6 +82,7 @@ Mock.mock('/api/add/news', 'post', (options) => {
   return {
     status:200,
     message: '添加成功',
+    total: newsList.length,
     newsList: newsList
   }
 })
@@ -95,6 +96,7 @@ Mock.mock('/api/delete/news', 'post', (options) => {
   return {
     status:200,
     message: '删除成功',
+    total: newsList.length,
     newsList: newsList
   }
 })
